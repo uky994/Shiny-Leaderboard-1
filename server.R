@@ -14,7 +14,7 @@ shinyServer(function(input, output) {
     if(is.null(inFile)){ NULL}else{
       dat <- read.csv(inFile$datapath, header=T) 
       Ydat <- read.csv("Actuals.csv",header = T)
-      mean((Ydat$Y - dat$X)^2)
+      mean((Ydat$Y - dat$Y)^2)
       }
     })      
       
